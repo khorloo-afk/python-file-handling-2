@@ -9,15 +9,13 @@ def save_scores(names, scores, filename):
 # Exercise 2
 def average_score(filename):
     file = open(filename, "r")
-    numbers  = []
-    for i in range(len(file)):
-        numbers.append(float(line.strip()))
+    lst  = file.readlines()
+    s=0
+    for i in range(len(lst)):
+        num = lst[i].split(",")
+        s=s+int(num[1])
+    return round(s / len(lst), 1)
 
-        average = sum(numbers) / len(numbers) if numbers else 0
-        print(f"The average is: {average}")
-
-        file.close()
-        print("File resource successfully closed.")
 # Exercise 3
 def filter_passed(source, destination, pass_mark):
     # Write your code here
