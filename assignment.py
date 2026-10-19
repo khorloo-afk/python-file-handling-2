@@ -8,7 +8,7 @@ def save_scores(names, scores, filename):
     file.close()
 # Exercise 2
 def average_score(filename):
-    file = open(filename, "w")
+    file = open(filename, "r")
     numbers  = []
     for i in range(len(file)):
         numbers.append(float(line.strip()))
