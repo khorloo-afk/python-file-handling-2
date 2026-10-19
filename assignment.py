@@ -14,7 +14,6 @@ def average_score(filename):
         average = sum(numbers) / len(numbers) if numbers else 0
         print(f"The average is: {average}")
     file.close()
-    print("File resource successfully closed.")
 
 # Exercise 3
 def filter_passed(source, destination, pass_mark):
