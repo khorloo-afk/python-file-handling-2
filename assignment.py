@@ -11,10 +11,13 @@ def average_score(filename):
     file = open(filename, "r")
     lst  = file.readlines()
     s=0
+    c=0
     for i in range(len(lst)):
-        num = lst[i].split(",")
-        s=s+int(num[1])
-    return round(s / len(lst), 1)
+        if lst[i]!="\n":
+            num = lst[i].split(",")
+            s=s+int(num[1])
+            c=c+1
+    return round(s / c, 1)
 
 # Exercise 3
 def filter_passed(source, destination, pass_mark):
